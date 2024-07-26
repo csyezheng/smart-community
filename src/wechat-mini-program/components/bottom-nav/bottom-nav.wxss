@@ -1,0 +1,40 @@
+/* components/bottom-nav/bottom-nav.wxss */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  z-index: 1000; /* Ensure it is above other content */
+}
+
+.nav-item {
+  text-align: center;
+  flex: 1; /* Ensures equal spacing for items */
+}
+
+.nav-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: column; /* Stack icon and label vertically */
+  align-items: center; /* Center align items */
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.active {
+  color: #007aff; /* Active tab color */
+  font-weight: bold;
+}

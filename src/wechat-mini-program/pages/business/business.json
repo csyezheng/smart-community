@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Business",
+  "usingComponents": {
+    "header": "/components/header/header",
+    "bottom-nav": "/components/bottom-nav/bottom-nav"
+  }
+}

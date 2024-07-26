@@ -1,0 +1,140 @@
+/* pages/forums/forums.wxss */
+.forums-wrapper-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding-right: 10px;
+}
+
+/* Scroll view for horizontal scrolling */
+.forums-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.forums-scroll-view {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  padding: 10px 0;
+  height: 40px;
+}
+
+.forums-item {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  font-size: 16px;
+  text-align: center;
+  height: 20px;
+}
+
+.forums-item.active {
+  font-weight: bold;
+  border-bottom: 2px solid #007aff;
+}
+
+.swiper-container {
+  flex: 1;
+}
+
+.post-list {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.post-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.post-author-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.post-author-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.post-author {
+  font-weight: bold;
+}
+
+.post-time {
+  color: #999;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.follow-button {
+  flex-shrink: 0; /* Prevent the button from shrinking */
+  flex-basis: 70px; /* Ensure the button takes up the specified width */
+  background-color: #007aff;
+  color: #fff;
+  padding: 5px 0;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  margin-left: 10px; /* Add some space between the button and the author info */
+}
+
+.follow-button[disabled] {
+  background-color: #aaa;
+}
+
+.post-content-wrapper {
+  margin-bottom: 10px;
+}
+
+.post-content {
+  color: #666;
+}
+
+.post-bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-topic {
+  color: #007aff;
+  font-size: 12px;
+  padding: 0 10px;
+  background-color: #ebeaea;
+  border-radius: 25px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}

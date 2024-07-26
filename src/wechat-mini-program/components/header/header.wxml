@@ -1,0 +1,5 @@
+<!-- components/header/header.wxml -->
+<view class="header">
+  <button class="back-button" bindtap="onBack" wx:if="{{showBack}}">←</button>
+  <text class="title">{{title}}</text>
+</view>

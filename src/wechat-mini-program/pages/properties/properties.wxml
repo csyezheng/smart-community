@@ -1,0 +1,14 @@
+<!-- pages/properties/properties.wxml -->
+<view class="container">
+  <header title="Properties" showBack="{{false}}" />
+  <view class="properties-list">
+    <block wx:for="{{properties}}" wx:key="id">
+      <view class="property-card">
+        <image src="{{item.image}}" class="property-image" />
+        <text class="property-title">{{item.title}}</text>
+        <text class="property-description">{{item.description}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- <bottom-nav current="properties" bind:change="onNavChange" /> -->
+</view>

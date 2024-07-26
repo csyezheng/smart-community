@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/properties/properties",
+    "pages/business/business",
+    "pages/profile/profile",
+    "pages/forums/forums"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/icons/home.png",
+        "selectedIconPath": "/images/icons/home.png",
+        "text": "Home"
+      },
+      {
+        "pagePath": "pages/forums/forums",
+        "iconPath": "/images/icons/socialize.png",
+        "selectedIconPath": "/images/icons/socialize.png",
+        "text": "Forums"
+      },
+      {
+        "pagePath": "pages/business/business",
+        "iconPath": "/images/icons/shopping.png",
+        "selectedIconPath": "/images/icons/shopping.png",
+        "text": "Shopping"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "iconPath": "/images/icons/profile.png",
+        "selectedIconPath": "/images/icons/profile.png",
+        "text": "Profile"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

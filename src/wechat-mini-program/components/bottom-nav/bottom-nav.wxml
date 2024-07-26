@@ -1,0 +1,27 @@
+<!-- components/bottom-nav/bottom-nav.wxml -->
+<view class="bottom-nav">
+  <view class="nav-item" data-page="index" bindtap="onTabChange">
+    <view class="icon-container">
+      <image src="/images/icons/home.png" class="icon" />
+      <text class="nav-label {{current === 'home' ? 'active' : ''}}">Home</text>
+    </view>
+  </view>
+  <view class="nav-item" data-page="properties" bindtap="onTabChange">
+    <view class="icon-container">
+      <image src="/images/icons/properties.png" class="icon" />
+      <text class="nav-label {{current === 'properties' ? 'active' : ''}}">Properties</text>
+    </view>
+  </view>
+  <view class="nav-item" data-page="business" bindtap="onTabChange">
+    <view class="icon-container">
+      <image src="/images/icons/shopping.png" class="icon" />
+      <text class="nav-label {{current === 'business' ? 'active' : ''}}">Shopping</text>
+    </view>
+  </view>
+  <view class="nav-item" data-page="profile" bindtap="onTabChange">
+    <view class="icon-container">
+      <image src="/images/icons/profile.png" class="icon" />
+      <text class="nav-label {{current === 'profile' ? 'active' : ''}}">Profile</text>
+    </view>
+  </view>
+</view>

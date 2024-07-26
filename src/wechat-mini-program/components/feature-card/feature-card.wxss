@@ -1,0 +1,27 @@
+/* components/feature-card/feature-card.wxss */
+.feature-card {
+  width: 150px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+}
+
+.name {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+}

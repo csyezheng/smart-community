@@ -1,0 +1,13 @@
+{
+  "navigationBarTitleText": "Smart Community",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "backgroundColor": "#f9f9f9",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "header": "/components/header/header",
+    "bottom-nav": "/components/bottom-nav/bottom-nav",
+    "feature-card": "/components/feature-card/feature-card"
+  }
+}

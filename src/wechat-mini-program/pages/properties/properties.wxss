@@ -1,0 +1,35 @@
+/* pages/properties/properties.wxss */
+.container {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.properties-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.property-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 15px;
+}
+
+.property-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.property-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.property-description {
+  font-size: 14px;
+  color: #666;
+}

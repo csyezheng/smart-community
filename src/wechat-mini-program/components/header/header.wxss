@@ -1,0 +1,22 @@
+/* components/header/header.wxss */
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #f8f8f8; /* Header background color */
+  width: 22rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #007aff; /* Back button color */
+  margin-right: 10px; /* Space between button and title */
+}
+
+.title {
+  font-size: 18px;
+  color: #333;
+  flex: 1; /* Allows title to take up remaining space */
+  text-align: left;
+}

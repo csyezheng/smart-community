@@ -1,0 +1,32 @@
+<!-- pages/business/business.wxml -->
+<view class="container">
+  <!-- <header title="Business" showBack="{{false}}" /> -->
+  <view class="search-bar">
+    <input class="search-input" placeholder="搜索周边商业商品..." />
+    <button class="search-button" style="width: 100px;">搜索</button>
+  </view>
+  <view class="category-container">
+    <scroll-view scroll-x="true" enable-flex="true" class="category-scroll-view">
+      <view wx:for="{{categories}}" wx:key="id" class="category-item">
+        {{item.name}}
+      </view>
+    </scroll-view>
+  </view>
+  <view class="store-container">
+    <view wx:for="{{stores}}" wx:key="id" class="store-card">
+      <view class="store-info">
+        <image class="store-image" src="{{item.storeImage}}" />
+        <view class="store-name-container">
+          <text class="store-name">{{item.storeName}}</text>
+        </view>
+      </view>
+      <scroll-view scroll-x="true" class="product-scroll-view">
+        <view wx:for="{{item.products}}" wx:key="id" class="product-item">
+          <image class="product-image" src="{{item.productImage}}" />
+          <text class="product-name">{{item.productName}}</text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <!-- <bottom-nav current="business" bind:change="onNavChange" /> -->
+</view>

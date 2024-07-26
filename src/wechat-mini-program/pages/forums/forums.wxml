@@ -1,0 +1,46 @@
+<!-- pages/forums/forums.wxml -->
+<view class="forums-wrapper-container">
+  <!-- <header title="Discussion Forums" showBack="true" /> -->
+  
+  <view class="forums-container">
+    <scroll-view scroll-x="true" enable-flex="true" class="forums-scroll-view">
+      <view wx:for="{{tabs}}" wx:key="name" data-index="{{index}}" bindtap="switchTab" class="{{currentTab === index ? 'forums-item active' : 'forums-item'}}">
+        <text>{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <scroll-view scroll-y="true" class="post-list">
+    <view class="post-item" wx:for="{{currentPosts}}" wx:key="id">
+      <view class="post-author-wrapper">
+        <image class="avatar" src="{{item.avatar}}" />
+        <view class="post-author-info">
+          <text class="post-author">{{item.author}}</text>
+          <text class="post-time">{{item.date}}</text>
+        </view>
+        <button class="follow-button" data-id="{{item.id}}" style="margin-right:10px;" bindtap="followAuthor">{{item.isFollowing ? '已关注' : '关注'}}</button>
+      </view>
+      <view class="post-content-wrapper">
+        <text class="post-content" style="padding-right:20px;">{{item.content}}</text>
+      </view>
+      
+      <view class="post-bottom-wrapper">
+        <view class="post-topic-wrapper">
+          <text class="post-topic">#{{item.topic}}</text>
+        </view>
+        <view class="post-actions">
+          <view class="action">
+            <image src="/images/icons/reply-icon.png" class="icon" />
+            <text>{{item.replies}}</text>
+          </view>
+          <view class="action">
+            <image src="/images/icons/like-icon.png" class="icon" />
+            <text>{{item.likes}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- <bottom-nav current="forums" bind:change="onNavChange" /> -->
+</view>

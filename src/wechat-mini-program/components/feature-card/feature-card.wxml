@@ -1,0 +1,5 @@
+<!-- components/feature-card/feature-card.wxml -->
+<view class="feature-card" bindtap="onTap">
+  <image class="icon" src="{{feature.icon}}" alt="{{feature.name}}" />
+  <text class="name">{{feature.name}}</text>
+</view>
