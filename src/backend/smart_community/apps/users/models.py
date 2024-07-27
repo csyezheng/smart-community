@@ -2,10 +2,10 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 
 
-class User(AbstractUser):
-    email = models.EmailField(unique=True)
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+class CustomUser(AbstractUser):
+    # Add additional fields if necessary
+    # core authentication fields
+    phone_number = models.CharField(max_length=15, blank=True, null=True)
     date_joined = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -13,7 +13,7 @@ class User(AbstractUser):
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='profile')
+    user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, related_name='profile')
     bio = models.TextField(blank=True, null=True)
     location = models.CharField(max_length=100, blank=True, null=True)
     birth_date = models.DateField(blank=True, null=True)

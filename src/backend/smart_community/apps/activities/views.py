@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from rest_framework import viewsets, permissions
+from .models import Activity
+from .serializers import ActivitySerializer
 
-# Create your views here.
+
+class ActivityViewSet(viewsets.ModelViewSet):
+    queryset = Activity.objects.all()
+    serializer_class = ActivitySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    def perform_create(self, serializer):
+        serializer.save(created_by=self.request.user)

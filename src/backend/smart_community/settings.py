@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'smart_community.apps.core',
+    'drf_yasg',
     'smart_community.apps.users',
     'smart_community.apps.announcements',
     'smart_community.apps.forums',
@@ -93,7 +93,7 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.CustomUser'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -135,3 +135,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = '/users/login/'
+LOGIN_REDIRECT_URL = '/users/profile/'
+LOGOUT_REDIRECT_URL = '/'
